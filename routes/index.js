@@ -12,8 +12,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-module.exports = router;
-
 const requestURL = `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${key}&minProtein=50&maxCalories=800&number=1`
 
 // axios.get(requestURL).then()
@@ -23,4 +21,4 @@ const requestURL = `https://api.spoonacular.com/recipes/findByNutrients?apiKey=$
 
 const jsonContent = 5; //fs.readFile('private/recipes.json')
 
-// module.exports = { jsonContent };
+module.exports = router;
