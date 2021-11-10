@@ -2,4 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  each element in data
+    li= element.title
+    li= element.calories
+    li= element.protein
+    li= element.fat
+    li= element.carbs
