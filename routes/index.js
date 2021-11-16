@@ -15,8 +15,8 @@ let recipes;
 router.get('/', function(req, res, next) {
   axios.get(requestURL)
   .then((response) => {
-    console.log(response.data);
     recipes = response.data;
+    console.log(response.data.image)
   });
   res.render('index', { title: 'food', data: recipes });
 });
