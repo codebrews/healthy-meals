@@ -71,10 +71,30 @@ block content
                 h5#nutrition-facts.col-2.bg-secondary.text-white.text-center.p-1 Nutrition Facts
             #nutrition.row.border-bottom.border-top.pt-3.pb-1.text-secondary
               .col
+                p
+                  small Calories:
+                  br
+                  strong #{data.nutrition.nutrients[0].amount} kcal
               .col
+                p
+                  small Carbohydrate:
+                  br
+                  strong #{data.nutrition.nutrients[3].amount} g
               .col
+                p
+                  small Fat:
+                  br
+                  strong #{data.nutrition.nutrients[1].amount} g
               .col
+                p
+                  small Protein:
+                  br
+                  strong #{data.nutrition.nutrients[9].amount} g
               .col
+                p
+                  small Cholesterol:
+                  br
+                  strong #{data.nutrition.nutrients[6].amount} mg
             .row.mt-5
               p.col-3.border-bottom.mx-0.py-3.mb-3.text-decoration-underline
                 a.text-secondary(href='#') 3 COMMENTS

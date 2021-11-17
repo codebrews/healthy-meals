@@ -21,6 +21,7 @@ router.get('/:id', function(req, res, next) {
   axios.get(`https://api.spoonacular.com/recipes/${req.params.id}/information?apiKey=${key}&includeNutrition=true`)
       .then((response) => {
         const recipeDetail = response.data;
+        console.log(recipeDetail.nutrition.nutrients);
         res.render('detail', { title: 'food', data: recipeDetail });
       });
 });
