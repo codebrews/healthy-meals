@@ -1,6 +1,6 @@
 'use strict'
 
-function imageRatio() {
+function imageRatio(h, w) {
     $(".image-ratio").each(function () {
         var thisColumn = $(this);
         var width = thisColumn.width();
