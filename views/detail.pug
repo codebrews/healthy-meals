@@ -1,0 +1,135 @@
+extends layout
+
+block content
+    main#recipe-detail.container.my-5.py-5
+        .row.my-5.py-5.justify-content-center
+          .col-lg-12.text-center
+            h4.text-muted Recipe Rating: #{data.spoonacularScore}
+            h1 #{data.title}
+            p
+              i.fas.fa-user.text-success
+              |  #{data.creditsText}
+          .col-lg-8.mt-4.image-ratio(data-recipeid=`${data.id}`)
+            .w-100(id=`img-${data.id}` style=`background-image: url('${data.image}'); background-size: 125%; background-position: center center;`)
+            .row.bg-success.mx-0.p-3.pb-1.mb-4
+              .col-4.text-white
+                p.mb-0 Serves:
+                p
+                  strong
+                    i.fas.fa-users
+                    |  #{data.servings} people
+              .col-4.text-white
+                p.mb-0 Prep Time:
+                p
+                  strong
+                    i.far.fa-clock
+                    |  #{data.readyInMinutes} min
+              .col-4.text-white
+                p.mb-0 Cook Time:
+                p
+                  strong
+                    i.far.fa-clock
+                    |  #{data.readyInMinutes} min
+            p #{data.summary}
+            button.btn.btn-sm.btn-outline-dark.rounded-pill Chicken
+            button.btn.btn-sm.btn-outline-dark.rounded-pill Sauce
+            button.btn.btn-sm.btn-outline-dark.rounded-pill Grease
+            button.btn.btn-sm.btn-outline-dark.rounded-pill Chunks
+            .row.mt-4.mb-0.pb-0
+              .col-12.col-sm-6
+                h5.text-secondary.mb-3 Ingredients
+                ul.list-group.bg-light.list-unstyled.p-3.pb-5
+                  li.border-bottom.p-2 Cras justo odio
+                  li.border-bottom.p-2 Dapibus ac facilisis in
+                  li.border-bottom.p-2 Morbi leo risus
+                  li.border-bottom.p-2 Porta ac consectetur ac
+                  li.border-bottom.p-2 Vestibulum at eros
+              .col-12.col-sm-6
+                h5.text-secondary.mb-3 Directions
+                ol.list-group.list-group-flush.p-3.pb-5.pt-0
+                  li.p-2
+                    | Beef brisket doner fatback pork belly beef ribs.
+                    | Spare ribs beef
+                    | capicola hamburger tail, filet mignon ham tongue kielbasa drumstick biltong chicken pancetta
+                    | burgdoggen t-bone.
+                  li.p-2
+                    | Andouille biltong meatball swine rump prosciutto beef ribs. Beef
+                    | pork flank bresaola swine shankle turducken spare ribs kevin pastrami pork chop. Meatball
+                    | leberkas boudin alcatra
+                  li.p-2
+                    | fatback ground round landjaeger. Corned beef chuck beef ribs
+                    | hamburger doner, kevin
+                  li.p-2
+                    | spare ribs buffalo filet mignon leberkas turkey ham hock pork
+                    | belly biltong. Cupim landjaeger buffalo alcatra boudin.
+                  li.p-2
+                    | Turducken picanha chuck tail, fatback swine pig rump kielbasa
+                    | leberkas pancetta cupim. Ham bacon t-bone swine, frankfurter rump ribeye biltong leberkas.
+                    | Porchetta rump bresaola kielbasa filet mignon buffalo burgdoggen, pig frankfurter
+            .row.mt-0.pt-0
+              .col
+                h5#nutrition-facts.col-2.bg-secondary.text-white.text-center.p-1 Nutrition Facts
+            #nutrition.row.border-bottom.border-top.pt-3.pb-1.text-secondary
+              .col
+              .col
+              .col
+              .col
+              .col
+            .row.mt-5
+              p.col-3.border-bottom.mx-0.py-3.mb-3.text-decoration-underline
+                a.text-secondary(href='#') 3 COMMENTS
+              .col-12.border.p-3.mb-3
+                .row.border-bottom.text-muted.justify-content-between.mb-3
+                  .col
+                    small
+                      | Nov 1, 2021 -
+                      b.text-secondary Guy
+                      |  says
+                  .col.text-end
+                    a.text-secondary(href='#')
+                      em
+                        small Reply
+                p
+                  | This is delicious. I&apos;m done traveling the good ol&apos; U.S. of A. in my Fiery Cruiser and making
+                  | brilliant new recipes. I&apos;m going to open a food truck and make nothing but this from now on!
+            .row
+              .col-12.border.p-3.mb-3
+                .row.border-bottom.text-muted.justify-content-between.mb-3
+                  .col
+                    small
+                      | Nov 5, 2021 -
+                      b.text-secondary Gordon
+                      |  says
+                  .col.text-end
+                    a.text-secondary(href='#')
+                      em
+                        small Reply
+                p This is utter rubbish! Don&apos;t quit your day job!
+            .row.justify-content-end
+              .col-11.border.p-3.mb-3
+                .row.border-bottom.text-muted.justify-content-between.mb-3
+                  .col
+                    small
+                      | Nov 6, 2021 -
+                      b.text-secondary Guy
+                      |  says
+                  .col.text-end
+                    a.text-secondary(href='#')
+                      em
+                        small Reply
+                p That&apos;s super uncool bro! Why&apos;s the internet always pick on me?
+            .row.text-secondary
+              form
+                .form-group.my-3
+                  label(for='reply') Leave a Reply
+                  textarea#reply.form-control.my-2(rows='4')
+                .row.form-row
+                  .form-group.col-md-4
+                    label(for='name') Name
+                    input#inputName.form-control.my-2(type='text')
+                  .form-group.col-md-4
+                    label(for='email') Email
+                    input#email.form-control.my-2(type='text')
+                  .form-group.col-md-4
+                    label(for='website') Website
+                    input#website.form-control.my-2(type='text')
