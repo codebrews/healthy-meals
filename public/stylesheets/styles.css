@@ -1,0 +1,60 @@
+#abs-left {
+    position: absolute;
+    left: 30px;
+}
+
+#abs-right {
+    position: absolute;
+    right: 30px;
+}
+
+.nav-clear {
+    margin-top: 72px;
+}
+
+.nav-height {
+    box-sizing: content-box;
+    height: 40px;
+    padding: 8px;
+}
+
+.bg-mint {
+    background-color: #ccffcc;
+}
+
+.form-pad {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.ct-height {
+    height: 100px;
+}
+
+.recipe-link {
+    text-decoration: none;
+}
+
+.recipe-link:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 70%;
+}
+
+.pic-link:hover {
+    opacity: 50%;
+}
+
+#nutrition-facts {
+    position: relative;
+    top: 20px;
+    left: -15px;
+}
+
