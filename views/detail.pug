@@ -31,10 +31,10 @@ block content
                     i.far.fa-clock
                     |  #{data.readyInMinutes} min
             p #{data.summary}
-            button.btn.btn-sm.btn-outline-dark.rounded-pill Chicken
-            button.btn.btn-sm.btn-outline-dark.rounded-pill Sauce
-            button.btn.btn-sm.btn-outline-dark.rounded-pill Grease
-            button.btn.btn-sm.btn-outline-dark.rounded-pill Chunks
+            button.btn.btn-sm.btn-outline-dark.rounded-pill.mx-1 Meat
+            button.btn.btn-sm.btn-outline-dark.rounded-pill.mx-1 Sauce
+            button.btn.btn-sm.btn-outline-dark.rounded-pill.mx-1 Grease
+            button.btn.btn-sm.btn-outline-dark.rounded-pill.mx-1 Chunks
             .row.mt-4.mb-0.pb-0
               .col-12.col-sm-6
                 h5.text-secondary.mb-3 Ingredients
@@ -68,7 +68,7 @@ block content
                     | Porchetta rump bresaola kielbasa filet mignon buffalo burgdoggen, pig frankfurter
             .row.mt-0.pt-0
               .col
-                h5#nutrition-facts.col-2.bg-secondary.text-white.text-center.p-1 Nutrition Facts
+                h5#nutrition-facts.col-3.bg-secondary.text-white.text-center.p-1 Nutrition Facts
             #nutrition.row.border-bottom.border-top.pt-3.pb-1.text-secondary
               .col
                 p
@@ -139,11 +139,11 @@ block content
                         small Reply
                 p That&apos;s super uncool bro! Why&apos;s the internet always pick on me?
             .row.text-secondary
-              form
+              form(action="/")
                 .form-group.my-3
                   label(for='reply') Leave a Reply
                   textarea#reply.form-control.my-2(rows='4')
-                .row.form-row
+                .row.form-row.mb-3
                   .form-group.col-md-4
                     label(for='name') Name
                     input#inputName.form-control.my-2(type='text')
@@ -153,5 +153,7 @@ block content
                   .form-group.col-md-4
                     label(for='website') Website
                     input#website.form-control.my-2(type='text')
+                .row.form-row.mx-0
+                  button.btn.btn-success.btn-block(type='submit') Submit
 
     include footer.pug

@@ -7,7 +7,7 @@ html
   body
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top.nav-height.p-3.shadow
       .container-fluid.justify-content-center
-        a.navbar-brand(href='/')
+        a#abs-left.navbar-brand(href='/')
           i.fa.fa-cutlery.text-success(aria-hidden='true')
           | &emsp;F&uuml;&uuml;D
         button#abs-right.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
@@ -17,21 +17,19 @@ html
             li.nav-item.mx-3
               a.nav-link.active(aria-current='page' href='/') Home
             li.nav-item.mx-3
-              a.nav-link(href='#') Links
+              a.nav-link(href='/99999') Recipe
             li.nav-item.mx-3.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-                | Dropdown
+                | Other
               ul.dropdown-menu(aria-labelledby='navbarDropdown')
                 li
-                  a.dropdown-item(href='/149425') Recipe
+                  a.dropdown-item(href='https://spoonacular.com/food-api') spoonacular API
                 li
-                  a.dropdown-item(href='#') Another action
+                  a.dropdown-item(href='#') 
                 li
                   hr.dropdown-divider
                 li
                   a.dropdown-item(href='#') Something else here
-            li.nav-item.mx-3
-              a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') Disabled
           form#abs-right.d-flex
             .input-group
               input.form-control(type='search' placeholder='Search' aria-label='Search')
