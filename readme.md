@@ -2,7 +2,7 @@
 ### Recipe finder
 #### Code Louisville JavaScript portfolio project
 ### Description:
-Built with Express.js, this app finds recipes from [Spoonacular API](https://spoonacular.com/food-api) based on nutrition parameters. Specifically it searches for recipes that contain 50g+ of protein and no more than 800 calories. The data objects returned are displayed dynamically as recipe cards complete with links and pictures that will fetch and display more specific individual recipe details.
+Built with Express.js, this app finds recipes from [spoonacular API](https://spoonacular.com/food-api) based on nutrition parameters. Specifically it searches for recipes that contain 50g+ of protein and no more than 800 calories. The data objects returned are displayed dynamically as recipe cards complete with links and pictures that will fetch and display more specific individual recipe details.
 ### Running The Project Locally:
 In a command line, navigate to a directory where you'd like to clone the project and run the following commands.
 ```
@@ -26,4 +26,4 @@ Finally, back in the terminal run `npm start` and navigate to `localhost:3000` i
 3. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value 
     - It's declared in routes/index.js, used in the first router.get to add to the response data then sent to render
 ### Additional Notes:
-There is plenty of placeholder text and elements that are just placed as bootstrap practice. Enjoy the Bacon Ipsum and the Guy Fiery theme. Alas some of the links and all of the forms are placeholders too, but the recipe names and pics go to the respective recipe detail page. This is a separate route and api endpoint.  
+There is plenty of placeholder text and elements that are just placed as bootstrap practice. Enjoy the Bacon Ipsum and the Guy Fiery theme. Alas, some of the links and all of the forms are placeholders too, but the recipe names and pics go to the respective recipe detail page. This is a separate route and api endpoint.  
