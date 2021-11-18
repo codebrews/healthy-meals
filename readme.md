@@ -19,8 +19,11 @@ Finally, back in the terminal run `npm start` and navigate to `localhost:3000` i
 - Project on GitHup with over 5 commits.
 - Readme
 ##### CL 3+ Required Features:
-1. Retrieve data from an external API and display data in your app (such as with fetch() or with AJAX) - I used axios in routes/index.js to get data from spoonacular.
-2. Create a web server with at least one route and connect to it from your application using ExpressJS - The routes are all in routes/index.js. One gets the recipe card data and sends it to index.pug to render as the recipe card page. This is also the app's home page. The other route calls a different end point and sends data to detail.pug to render specific recipe details.
-3. 
+1. Retrieve data from an external API and display data in your app (such as with fetch() or with AJAX) 
+    - I used axios in routes/index.js to get data from spoonacular.
+2. Create a web server with at least one route and connect to it from your application using ExpressJS 
+    - The routes are all in routes/index.js. One gets the recipe card data and sends it to index.pug to render as the recipe card page. This is also the app's home page. The other route calls a different end point and sends data to detail.pug to render specific recipe details.
+3. Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value 
+    - It's declared in routes/index.js, used in the first router.get to add to the response data then sent to render
 ##### Additional Notes:
 The form on the find recipes page does not do anything at the moment. Sometime in the future I would like to add to the form and have the user set their own parameters for the 'Search Recipes by Nutrition' endpoint. Many of the links and buttons are also just decorative. I put them there so I could practice bootstrap forms and layouts. The ones that do work are the home and logo links and the recipe pictures and titles lead to the recipe detail page. There is plenty of placeholder text for things that I may later make dynamic as well. 

@@ -18,11 +18,10 @@ function getCalorieToProteinRatio(calories, protein) {
 router.get('/', function (req, res, next) {
   axios.get(`https://api.spoonacular.com/recipes/findByNutrients?apiKey=${key}&minProtein=50&maxCalories=800&random=true&number=100`)
     .then((response) => {
-      for (item of response.data) {
-        item.calorieToProteinRatio = getCalorieToProteinRatio(item.calories, item.protein);
+      for (obj of response.data) {
+        obj.calorieToProteinRatio = getCalorieToProteinRatio(obj.calories, obj.protein);
       }
-      let recipes = response.data;
-      res.render('index', { title: 'food', data: recipes });
+      res.render('index', { title: 'food', data: response.data });
     });
 });
 
